@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT       += sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -18,3 +19,5 @@ SOURCES += main.cpp\
 HEADERS  += login_page.h
 
 FORMS    += login_page.ui
+
+

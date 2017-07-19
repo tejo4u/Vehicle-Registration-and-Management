@@ -19,4 +19,5 @@ private:
     Ui::Login_page *ui;
 };
 
+
 #endif // LOGIN_PAGE_H
