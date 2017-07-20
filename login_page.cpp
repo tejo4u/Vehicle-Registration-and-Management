@@ -12,7 +12,6 @@ Login_page::Login_page(QWidget *parent) :
     // Combobox Opitons
     QStringList designationList=(QStringList()<<"Administrator"<<"Data Operator");
     ui->comboBox->addItems(designationList);
-
 }
 
 Login_page::~Login_page()
@@ -35,6 +34,7 @@ void Login_page::on_pushButton_clicked()
 
         if(result){
             QMessageBox::about(this,"Login Successful!","Redirecting! Please wait...");
+            //Dashboard goes here... based on Admin or Data operator
         }
         else{
             QMessageBox::about(this,"Wrong Input Error!","Entry Does not exist! Please create a new account.");
