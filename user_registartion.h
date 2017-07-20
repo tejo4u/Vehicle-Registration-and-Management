@@ -4,11 +4,9 @@
 #include<QSql>
 #include <QDialog>
 #include <QSqlQuery>
-#include <QMessageBox>
 #include <QString>
 #include <QVariant>
 #include <string>
-#include "database_connection.h"
 #include "password_hasher.h"
 
 namespace Ui {

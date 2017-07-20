@@ -28,12 +28,13 @@ void user_registartion::on_pushButton_clicked()
     ConnectDatabase regConnection;
     regConnection.openConnection();
 
-    if(ui->lineEdit->text()!= "" || ui->lineEdit_2->text() != "" || ui->comboBox->itemData(ui->comboBox->currentIndex()).toString() != ""){
+    if(ui->lineEdit->text()!= "" || ui->lineEdit_2->text() != "" || ui->comboBox->currentText() != ""){
          NewRegistration newEntry;
          newEntry.getUserPassDesig(ui->lineEdit->text(),ui->lineEdit_2->text(),ui->comboBox->currentText());
          newEntry.registerNewUser();
+         QMessageBox::about(this,"Registration Successful!","Successfully Registered! You can now login.");
 }
-    else {
+   else{
         QMessageBox::about(this,"Input Error!","Please Enter all the Details to continue");
     }
     regConnection.closeConnection();
