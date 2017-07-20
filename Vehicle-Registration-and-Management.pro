@@ -14,10 +14,16 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        login_page.cpp
+        login_page.cpp \
+    user_registartion.cpp
 
-HEADERS  += login_page.h
+HEADERS  += login_page.h \
+    login_verification.h \
+    database_connection.h \
+    user_registartion.h \
+    password_hasher.h
 
-FORMS    += login_page.ui
+FORMS    += login_page.ui \
+    user_registartion.ui
 
 
