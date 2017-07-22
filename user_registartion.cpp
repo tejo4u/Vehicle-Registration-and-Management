@@ -29,10 +29,13 @@ void user_registartion::on_pushButton_clicked()
     regConnection.openConnection();
 
     if(ui->lineEdit->text()!= "" || ui->lineEdit_2->text() != "" || ui->comboBox->currentText() != ""){
-         NewRegistration newEntry;
-         newEntry.getUserPassDesig(ui->lineEdit->text(),ui->lineEdit_2->text(),ui->comboBox->currentText());
-         newEntry.registerNewUser();
-         QMessageBox::about(this,"Registration Successful!","Successfully Registered! You can now login.");
+         NewRegistration newEntry(ui->lineEdit->text(),ui->lineEdit_2->text(),ui->comboBox->currentText());
+         if(newEntry.registerNewUser() == false ){
+         QMessageBox::about(this,"Registration Unsuccesful!","Username already exist! Please pick a unique one!");
+         }
+         else{
+              QMessageBox::about(this,"Registration Successful!","Successfully Registered! You can now login.");
+         }
 }
    else{
         QMessageBox::about(this,"Input Error!","Please Enter all the Details to continue");

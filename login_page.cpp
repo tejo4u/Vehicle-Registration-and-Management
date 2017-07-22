@@ -26,15 +26,14 @@ void Login_page::on_pushButton_clicked()
     ConnectDatabase regConnection;
     regConnection.openConnection();
 
-    if(ui->lineEdit->text() != "" && ui->lineEdit_2->text() != "" && ui->comboBox->currentText() != ""){
-        VerifyLogin newLogin;
-        newLogin.getUserPass(ui->lineEdit->text(),ui->lineEdit_2->text(),ui->comboBox->currentText());
+    if(ui->lineEdit->text() != "" && ui->lineEdit_2->text() != "" && ui->comboBox->currentText() != "")
+    {
+        VerifyLogin newLogin(ui->lineEdit->text(),ui->lineEdit_2->text(),ui->comboBox->currentText());
 
         bool result = newLogin.userLoginCheck();
 
         if(result){
             QMessageBox::about(this,"Login Successful!","Redirecting! Please wait...");
-            //Dashboard goes here... based on Admin or Data operator
         }
         else{
             QMessageBox::about(this,"Wrong Input Error!","Entry Does not exist! Please create a new account.");

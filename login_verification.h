@@ -9,37 +9,32 @@
 
 class VerifyLogin
 {
-
 private:
 
     QVariant userName,passwordHash,userDesig;
     bool isEntryExist;
+    std::string userdbName,userdbsalt,userdbDesig;
+    QSqlQuery existingUserQuery;
+
 
 public:
-    VerifyLogin() {
-
-    }
-
-    void getUserPass(QVariant uName,QVariant uPassHash,QVariant uDesig){
+    VerifyLogin(QVariant uName,QVariant uPassHash,QVariant uDesig) {
         userName = uName;
         passwordHash = uPassHash;
         userDesig = uDesig;
     }
 
     bool userLoginCheck(){
-        QSqlQuery existingUserQuery;
 
         existingUserQuery.prepare("SELECT * FROM user_login where user_name = :userName;");
         existingUserQuery.bindValue(":userName",userName);
-
         isEntryExist = existingUserQuery.exec(); // Returns True if Entry Exist
 
         if(isEntryExist ==  false){
             return false;
-    }
-        else{
-               std::string userdbName,userdbsalt,userdbDesig;
+        }
 
+        else{
                 while(existingUserQuery.next()){
                  userdbName = existingUserQuery.value(0).toString().toStdString();
                  userdbsalt = existingUserQuery.value(1).toString().toStdString();
@@ -53,10 +48,9 @@ public:
                     return false;
                 }
             }
-           existingUserQuery.clear();
-        }
-
-
+            existingUserQuery.clear();
+           return true;
+   }
 };
 
 #endif // LOGIN_VERIFICATION_H
