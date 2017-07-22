@@ -3,8 +3,6 @@
 
 #include <QMessageBox>
 #include <QDebug>
-#include <iostream>
-#include <database_connection.h>
 #include "password_hasher.h"
 
 class VerifyLogin
@@ -28,7 +26,7 @@ public:
 
         existingUserQuery.prepare("SELECT * FROM user_login where user_name = :userName;");
         existingUserQuery.bindValue(":userName",userName);
-        isEntryExist = existingUserQuery.exec(); // Returns True if Entry Exist
+        isEntryExist = existingUserQuery.exec();
 
         if(isEntryExist ==  false){
             return false;

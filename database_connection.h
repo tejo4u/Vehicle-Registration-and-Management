@@ -6,7 +6,6 @@
 #include <QSqlQueryModel>
 #include <QDir>
 #include <QString>
-#include <iostream>
 
 class ConnectDatabase
 {
