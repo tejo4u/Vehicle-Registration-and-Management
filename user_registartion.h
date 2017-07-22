@@ -55,6 +55,7 @@ public:
     newUserQuery.bindValue(":userdes",userDesig);
 
     newUserQuery.exec();
+    newUserQuery.clear();
 
 }
 };

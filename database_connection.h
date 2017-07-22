@@ -6,31 +6,39 @@
 #include <QSqlQueryModel>
 #include <QDir>
 #include <QString>
+#include <iostream>
 
 class ConnectDatabase
 {
-public:
+private:
 
-    QSqlDatabase VehicleDB = QSqlDatabase::addDatabase("QSQLITE");
-    bool connectionStatus;
+    QSqlDatabase VehicleDB; bool connectionStatus; QString databasePath="";
 
-    QString databasePath = QDir::currentPath() + "/Database/Vehicle_Reg.db"; // Database path
+ public:
+    ConnectDatabase(){
+
+        VehicleDB = QSqlDatabase::addDatabase("QSQLITE");
+        databasePath = QDir::currentPath() + "/Database/Vehicle_Reg.db";
+    }
 
    void openConnection(){
         VehicleDB.setDatabaseName(databasePath);
         connectionStatus= VehicleDB.open();
     }
 
-     void closeConnection(){
+   void closeConnection(){
         VehicleDB.close();
      }
 
      std::string checkConnection(){
+
         if(connectionStatus){
-            return "connected!";
+
+            return "Database Connected!";
         }
         else{
-            return "not connected!";
+
+            return "Databse not connected!";
         }
     }
 };

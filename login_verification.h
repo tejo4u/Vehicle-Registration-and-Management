@@ -1,18 +1,24 @@
 #ifndef LOGIN_VERIFICATION_H
 #define LOGIN_VERIFICATION_H
-#include <database_connection.h>
-#include "password_hasher.h"
+
 #include <QMessageBox>
 #include <QDebug>
 #include <iostream>
+#include <database_connection.h>
+#include "password_hasher.h"
 
 class VerifyLogin
 {
-public:
-    VerifyLogin() {}
+
+private:
 
     QVariant userName,passwordHash,userDesig;
     bool isEntryExist;
+
+public:
+    VerifyLogin() {
+
+    }
 
     void getUserPass(QVariant uName,QVariant uPassHash,QVariant uDesig){
         userName = uName;
@@ -47,6 +53,7 @@ public:
                     return false;
                 }
             }
+           existingUserQuery.clear();
         }
 
 
