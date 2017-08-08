@@ -43,3 +43,10 @@ void user_registartion::on_pushButton_clicked()
     regConnection.closeConnection();
 
 }
+
+void user_registartion::on_pushButton_2_clicked()
+{
+    ui->lineEdit->setText("");
+    ui->lineEdit_2->setText("");
+    ui->lineEdit_3->setText("");
+}

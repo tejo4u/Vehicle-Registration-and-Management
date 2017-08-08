@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/new/icons">
+        <file>Resources/icons/Actions-view-list-details-icon.png</file>
+        <file>Resources/icons/Button-Delete-icon.png</file>
+        <file>Resources/icons/export-icon.png</file>
+        <file>Resources/icons/Files-New-File-icon.png</file>
+        <file>Resources/icons/Pencil-icon.png</file>
+        <file>Resources/icons/Actions-system-suspend-icon.png</file>
+        <file>Resources/icons/Custom-reports-icon.png</file>
+        <file>Resources/icons/delete-file-icon.png</file>
+        <file>Resources/icons/Edit-Document-icon.png</file>
+        <file>Resources/icons/Logos-System-Report-icon.png</file>
+        <file>Resources/icons/Reports-icon.png</file>
+        <file>Resources/icons/Status-mail-read-icon.png</file>
+        <file>Resources/icons/Status-mail-task-icon.png</file>
+        <file>Resources/icons/Apps-partitionmanager-icon.png</file>
+        <file>Resources/icons/Code-Window-icon.png</file>
+        <file>Resources/icons/edit-icon.png</file>
+        <file>Resources/icons/Very-Basic-About-icon.png</file>
+    </qresource>
+</RCC>

@@ -6,19 +6,26 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>534</width>
-    <height>345</height>
+    <width>553</width>
+    <height>373</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="iconresource.qrc">
+    <normaloff>:/new/icons/Resources/icons/Files-New-File-icon.png</normaloff>:/new/icons/Resources/icons/Files-New-File-icon.png</iconset>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>170</x>
      <y>20</y>
-     <width>171</width>
+     <width>231</width>
      <height>41</height>
     </rect>
    </property>
@@ -28,7 +35,7 @@
     </font>
    </property>
    <property name="text">
-    <string>User Registration</string>
+    <string>User Registration Form</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -73,8 +80,8 @@
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>210</y>
+     <x>40</x>
+     <y>250</y>
      <width>121</width>
      <height>31</height>
     </rect>
@@ -91,8 +98,8 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>270</y>
+     <x>160</x>
+     <y>310</y>
      <width>111</width>
      <height>41</height>
     </rect>
@@ -128,13 +135,59 @@
    <property name="geometry">
     <rect>
      <x>200</x>
-     <y>210</y>
+     <y>250</y>
      <width>191</width>
      <height>31</height>
     </rect>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>310</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Clear</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>200</y>
+     <width>171</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Confirm Password</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_3">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>200</y>
+     <width>191</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
+  </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="iconresource.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "user_registartion.h"
+#include "admin_dashboard.h"
 
 namespace Ui {
 class Login_page;
@@ -26,6 +27,7 @@ private slots:
 private:
     Ui::Login_page *ui;
     user_registartion user_reg_form;
+    admin_dashboard admin_dash_form;
 };
 
 

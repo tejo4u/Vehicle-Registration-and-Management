@@ -32,8 +32,14 @@ void Login_page::on_pushButton_clicked()
 
         bool result = newLogin.userLoginCheck();
 
-        if(result){
-            QMessageBox::about(this,"Login Successful!","Redirecting! Please wait...");
+        if(result && ui->comboBox->currentText() == "Administrator"){
+            admin_dash_form.show();
+            this->close();
+        }
+        else if(result && ui->comboBox->currentText() == "Data Operator"){
+            // Data Operator Form
+            admin_dash_form.show();
+            this->close();
         }
         else{
             QMessageBox::about(this,"Wrong Input Error!","Entry Does not exist! Please create a new account.");

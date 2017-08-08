@@ -15,15 +15,21 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         login_page.cpp \
-    user_registartion.cpp
+    user_registartion.cpp \
+    admin_dashboard.cpp
 
 HEADERS  += login_page.h \
     login_verification.h \
     database_connection.h \
     user_registartion.h \
-    password_hasher.h
+    password_hasher.h \
+    admin_dashboard.h
 
 FORMS    += login_page.ui \
-    user_registartion.ui
+    user_registartion.ui \
+    admin_dashboard.ui
+
+RESOURCES += \
+    iconresource.qrc
 
 
